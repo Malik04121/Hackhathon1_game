@@ -1,7 +1,8 @@
 import { ChakraProvider, ColorModeScript } from "@chakra-ui/react"
 import * as React from "react"
 import * as ReactDOM from "react-dom/client"
-import { App } from "./App"
+import  {App}  from "./App"
+import { BrowserRouter } from 'react-router-dom';
 import reportWebVitals from "./reportWebVitals"
 import * as serviceWorker from "./serviceWorker"
 // import { ChakraProvider } from "@chakra-ui/react"
@@ -13,8 +14,9 @@ const root = ReactDOM.createRoot(container)
 root.render(
   <React.StrictMode>
     {/* <ChakraProvider> */}
+    <BrowserRouter><App/></BrowserRouter>
 
-    <App />
+    {/* <App/> */}
     {/* </ChakraProvider> */}
     <ColorModeScript />
   </React.StrictMode>,
