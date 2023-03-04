@@ -1,6 +1,6 @@
 <h1 align="center">Fruit Fight</h1> 
 
-<h2 align="center">Fruit Fight is a Online Game platform where user can play their favourite game. </h2>
+<h2 align="center">Fruit Fight is a Online Game platform where  focuses on fruit vocabulary in English . There is a fruit vocabulary practice section and a fruit spelling section .Fruit games let you slice and dice your favorite fruits. But you have to be ninja-fast! </h2>
 
 <br />
 <p align="center">
@@ -14,7 +14,7 @@
   <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="chakra-ui"/>
   <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="chakra-ui"/>
 </p>
-<h3 align="center"><a href=""><strong>Want to see live preview »</strong></a></h3>
+<h3 align="center"><a href="https://frontend-vert-alpha.vercel.app/"><strong>Want to see live preview »</strong></a></h3>
 
 
 ### In this project we have
