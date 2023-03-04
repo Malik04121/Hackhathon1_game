@@ -9,7 +9,7 @@ function Game(){
     useEffect(()=>{
         const gametime=setTimeout(()=>{
               setTimer(true)
-        },2000)
+        },5000)
 
         return () => {
             setTimer(false)

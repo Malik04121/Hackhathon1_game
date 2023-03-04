@@ -1,4 +1,4 @@
-import { Box, Button, Heading, Input,useToast } from "@chakra-ui/react"
+import { Box, Button, Heading, Image, Input,useToast } from "@chakra-ui/react"
 import { useState } from "react"
 import { Navigate, useNavigate } from "react-router-dom"
 
@@ -23,15 +23,20 @@ function UserForm(){
 
     return(
         <>
-        
-          <Box w="40%" bg="black" m="auto" color="white" mt="100px"p="5%">
-            <Heading>Game Name</Heading>
+          <Heading textAlign={"center"}>Let's Play Fruits Game..!😃</Heading>
+          <Box w={"100%"}>
+          <Box w="30%" bg="black" m="auto" color="white" mt="50px" p="20px">
+            <Heading>Your Name</Heading>
             <Box  color="white" mt="20px">
             <Input  value={userName} placeholder="Enter User Name" onChange={(e)=>setUserName(e.target.value)} /> 
-           <Button onClick={Submit} w="100%" bg="black" border="1px solid white" mt="20px">Submit</Button>
+           <Button onClick={Submit}  w="100%" bg="orange" fontWeight={"bold"}  border="1px solid white" mt="20px" >Start Game</Button>
             </Box>
-          
           </Box>
+          </Box>
+          <Box w={"20%"} m={"auto"}>
+            <Image src="https://www.getrushapp.com/assets/images/games/fruit_logo_small.png"/>
+          </Box>
+         
         </>
     )
 }
