@@ -9,23 +9,26 @@ const userRouter = express.Router()
 
 
 userRouter.post("/register",async(req,res)=>{
-      const {name,email,gender,password,age,city} = req.body;
+      const {name} = req.body;
       try {
-         bcrypt.hash(password,6,async(err,secure_pass)=>{
-            if(err){
-                console.log(err)
-            }else{
-                const user = new UserModel({name,email,gender,password:secure_pass,age,city})
-                await user.save()
-                res.send({"msg":"User Registered"})
-            }
-         })
+          const user = new UserModel({name})
+          await user.save()
+          res.send({"msg":"User Registered"})
+        
       } catch (error) {
         console.log({"msg":"Something went wrong","error":error.message})
       }
 })
 
 
+userRouter.patch("/update/:id",async(req,res)=>{
+    const score = req.body
+    try {
+        const user = UserModel.findByIdAndUpdate(req.body)
+    } catch (error) {
+        
+    }
+})
 
 userRouter.post("/login",async(req,res)=>{
     const {email,password} = req.body;

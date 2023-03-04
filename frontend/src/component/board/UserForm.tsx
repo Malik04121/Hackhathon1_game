@@ -1,4 +1,4 @@
-import { Box, Button, Heading, Input } from "@chakra-ui/react"
+import { Box, Button, Heading, Input,useToast } from "@chakra-ui/react"
 import { useState } from "react"
 import { Navigate, useNavigate } from "react-router-dom"
 
@@ -6,9 +6,18 @@ import { Navigate, useNavigate } from "react-router-dom"
 function UserForm(){
   const [userName,setUserName]=useState("")
   const navigate=useNavigate()
+  const toast = useToast()
 
   function Submit(){
           localStorage.setItem("username",userName)
+          toast({
+            title: "Success",
+            description: "Enjoy your fruit game.",
+            status: "success",
+            duration: 5000,
+            position: "top-right",
+            isClosable: true,
+          });
           navigate("/game")
   }
 
